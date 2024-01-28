@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DigiCardActivity">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/LightBlue"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/soulbillani"
+            android:text="Digi Card"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/r1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/crcimage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5sp"
+                android:src="@color/LightBlue" />
+
+            <ImageButton
+                android:id="@+id/btngallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/crcimage"
+                android:layout_toEndOf="@+id/crcimage"
+                android:src="@drawable/image" />
+            <ImageButton
+                android:id="@+id/btncamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera"
+                android:layout_toEndOf="@+id/crcimage"/>
+
+
+            <TextView
+                android:id="@+id/txtpersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/crcimage"
+                android:layout_marginStart="5sp"
+                android:text="Personal Info"
+                android:textSize="18sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/material1"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_below="@id/txtpersonal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtfullname"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/material1"
+                android:layout_margin="5sp"
+                android:hint="@string/full_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtDesignation"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtfullname"
+                android:hint="@string/designation"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtCompnay"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtDesignation"
+                android:hint="@string/company"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtAbout"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_below="@id/edtCompnay"
+                android:hint="@string/about_me"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="95sp"
+                    android:gravity="top"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtAbout"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:text="@string/contact_info"
+                android:textSize="18sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/material2"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_below="@id/txtContact" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtContact"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/material2"
+                android:hint="@string/contact_no"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtwp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtContact"
+                android:text="This is a Whatsapp Number?" />
+
+            <RadioGroup
+                android:id="@+id/Radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtwp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtwpnumber"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Radiogroup"
+                android:hint="@string/whatsapp_no"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtmail"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtwpnumber"
+                android:hint="@string/email"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtAddress"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtmail"
+                android:hint="@string/address"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtservices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtAddress"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="5sp"
+                android:text="@string/services_info"
+                android:textSize="18sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/material3"
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_below="@id/txtservices" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtServices"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_below="@id/material3"
+                android:hint="@string/services"
+                android:layout_margin="5sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="90sp"
+                    android:gravity="top" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtServices"
+                android:text="@string/add_multiple" />
+
+            <Button
+                android:id="@+id/btnnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10sp"
+                android:backgroundTint="@color/LightBlue"
+                android:text="Next  ->"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
